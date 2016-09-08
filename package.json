@@ -1,0 +1,48 @@
+{
+  "name": "nano-budget",
+  "version": "0.0.0",
+  "description": "Nano Budget",
+  "main": "server.js",
+  "scripts": {
+    "build": "npm run clean && npm run bundle",
+    "bundle": "cp src/index.html dist/ && webpack",
+    "clean": "rimraf dist/ && mkdirp dist",
+    "dev": "webpack-dev-server --inline --content-base src --history-api-fallback",
+    "prestart": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccfcheng/nano-budget.git"
+  },
+  "author": "Cliff Saporta Cheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccfcheng/nano-budget/issues"
+  },
+  "homepage": "https://github.com/ccfcheng/nano-budget#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "firebase": "^3.3.1",
+    "global": "^4.3.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-1": "^6.13.0",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "eslint-plugin-react": "^6.2.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  }
+}
