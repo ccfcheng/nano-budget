@@ -12,19 +12,18 @@ const config = {
 
 firebase.initializeApp(config);
 const provider = new firebase.auth.FacebookAuthProvider();
+provider.addScope('public_profile');
+provider.addScope('user_friends');
 
-console.log(process.env);
 
 const onClick = () => {
-  console.log('Clicked');
   firebase.auth().signInWithPopup(provider)
     .then(result => {
       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-      const token = result.credential.accessToken;
+      // const token = result.credential.accessToken;
       // The signed-in user info.
-      const user = result.user;
-      console.log('token:', token);
-      console.log('user:', user);
+      // const user = result.user;
+      console.log('result:', result);
     })
     .catch(error => {
       // Handle Errors here.
@@ -35,7 +34,7 @@ const onClick = () => {
       // The firebase.auth.AuthCredential type that was used.
       const credential = error.credential;
       // ...
-      console.log(errorCode, errorMessage, email, credential);
+      console.error(errorCode, errorMessage, email, credential);
     });
 };
 

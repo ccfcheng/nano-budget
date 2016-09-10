@@ -6,7 +6,8 @@
     "build": "npm run clean && webpack",
     "clean": "rm -rf dist/ && mkdir dist",
     "dev": "webpack-dev-server --inline --content-base . --history-api-fallback",
-    "start": "npm run build && http-server . -o",
+    "serve": "http-server . -o",
+    "start": "npm run build && npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
