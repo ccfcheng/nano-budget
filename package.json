@@ -2,13 +2,10 @@
   "name": "nano-budget",
   "version": "0.0.0",
   "description": "Nano Budget",
-  "main": "server.js",
   "scripts": {
-    "build": "npm run clean && npm run bundle",
-    "bundle": "cp src/index.html dist/ && webpack",
+    "build": "npm run clean && webpack",
     "clean": "rimraf dist/ && mkdirp dist",
-    "dev": "webpack-dev-server --inline --content-base src --history-api-fallback",
-    "prestart": "npm run build",
+    "dev": "webpack-dev-server --inline --content-base . --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,11 +20,16 @@
   "homepage": "https://github.com/ccfcheng/nano-budget#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "firebase": "^3.3.1",
     "global": "^4.3.0",
+    "http-server": "^0.9.0",
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.7.0",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
