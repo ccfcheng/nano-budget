@@ -100,7 +100,7 @@
 	  return _react2.default.createElement(
 	    'h1',
 	    { onClick: onClick },
-	    'Hello???'
+	    'Frontend Only!'
 	  );
 	};
 

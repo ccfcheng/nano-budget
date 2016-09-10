@@ -4,8 +4,9 @@
   "description": "Nano Budget",
   "scripts": {
     "build": "npm run clean && webpack",
-    "clean": "rimraf dist/ && mkdirp dist",
+    "clean": "rm -rf dist/ && mkdir dist",
     "dev": "webpack-dev-server --inline --content-base . --history-api-fallback",
+    "start": "npm run build && http-server . -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,9 +20,6 @@
   },
   "homepage": "https://github.com/ccfcheng/nano-budget#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "dotenv": "^2.0.0",
-    "express": "^4.14.0",
     "firebase": "^3.3.1",
     "global": "^4.3.0",
     "http-server": "^0.9.0",
@@ -42,8 +40,6 @@
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.2.1",
     "eslint-plugin-react": "^6.2.0",
-    "mkdirp": "^0.5.1",
-    "rimraf": "^2.5.4",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
   }
